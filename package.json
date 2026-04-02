@@ -1,0 +1,18 @@
+{
+  "name": "@pipeworx/mcp-xkcd",
+  "version": "1.0.0",
+  "description": "MCP server for xkcd comics",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": ["src"],
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "xkcd"],
+  "author": "Pipeworx",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
