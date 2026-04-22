@@ -1,30 +1,57 @@
-# @pipeworx/mcp-xkcd
+# mcp-xkcd
 
-MCP server for xkcd comics
+XKCD MCP — wraps xkcd.com JSON API (free, no auth)
+
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `get_latest` | Get the latest published XKCD comic |
-| `get_comic` | Get a specific XKCD comic by number |
-| `random_comic` | Get a random XKCD comic from the full archive |
+| `get_latest` | Get the latest published XKCD comic with its title, image, and alt text. |
+| `get_comic` | Get a specific XKCD comic by its number. |
+| `random_comic` | Get a random XKCD comic from the full archive. |
 
-## Quickstart (Pipeworx Gateway)
+## Quick Start
 
-```bash
-curl -X POST https://gateway.pipeworx.io/mcp \
-  -H "Content-Type: application/json" \
-  -d '{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "method": "tools/call",
-    "params": {
-      "name": "get_comic",
-      "arguments": { "number": 353 }
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
+
+```json
+{
+  "mcpServers": {
+    "xkcd": {
+      "url": "https://gateway.pipeworx.io/xkcd/mcp"
     }
-  }'
+  }
+}
 ```
+
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
+
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
+```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Xkcd data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
