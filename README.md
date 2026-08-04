@@ -2,15 +2,15 @@
 
 XKCD MCP — wraps xkcd.com JSON API (free, no auth)
 
-Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 673+ live data sources.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 1394+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `get_latest` | Get the latest published XKCD comic with its title, image, and alt text. |
-| `get_comic` | Get a specific XKCD comic by its number. |
-| `random_comic` | Get a random XKCD comic from the full archive. |
+| `get_latest` | Fetch the most recently published XKCD comic. Returns comic number, title, image URL, alt/hover text, publication date, transcript (if available), and permalink. |
+| `get_comic` | Fetch a specific XKCD comic by its number (e.g., 353 for 'Python'). Returns title, image URL, alt text, publication date, transcript, and permalink. |
+| `random_comic` | Fetch a randomly selected XKCD comic from the full archive (skips #404). Returns comic number, title, image URL, alt text, publication date, and transcript. |
 
 ## Quick Start
 
@@ -26,7 +26,7 @@ Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 }
 ```
 
-Or connect to the full Pipeworx gateway for access to all 673+ data sources:
+Or connect to the full Pipeworx gateway for access to all 1394+ data sources:
 
 ```json
 {
@@ -50,7 +50,7 @@ The gateway picks the right tool and fills the arguments automatically.
 
 ## More
 
-- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [Docs and guides](https://pipeworx.io/docs)
 - [pipeworx.io](https://pipeworx.io)
 
 ## License
