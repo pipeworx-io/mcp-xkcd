@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/xkcd",
+  "title": "Xkcd",
+  "description": "XKCD MCP — wraps xkcd.com JSON API (free, no auth)",
+  "version": "1.0.1",
+  "websiteUrl": "https://pipeworx.io/packs/xkcd",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-xkcd",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/xkcd/mcp"
+    }
+  ]
+}
