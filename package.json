@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-xkcd",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "XKCD MCP — wraps xkcd.com JSON API (free, no auth)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-00300d74ab2ee39462512807ef359fa4471295c860c49326704761ed6c9dde8c",
-    "sourceCommit": "b0fb3c31386cf0256dcf1e2f1b3440435a87ec35"
+    "sourceHash": "v1-b11c2a388de705b4a5e48ff0f8a4e8d9ad2d4784b6fa6e9499ff82b75115b24e",
+    "sourceCommit": "2cb50b368da3267446f2b6f6a3ddbd3d0eed3d73"
   }
 }
